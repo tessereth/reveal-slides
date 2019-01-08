@@ -1,4 +1,4 @@
-<!-- .slide: data-background-image="assets/lca-title-background.png" data-background-size="contain" class="title" -->
+<!-- .slide: data-background-image="assets/lca-title-background.png" data-background-size="contain" -->
 
 ### JIT Learning: It's great until it isn't
 <!-- .element style="font-weight: normal; padding-top: 5vh" -->
