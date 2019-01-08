@@ -19,7 +19,7 @@ if which yarn > /dev/null; then
 elif which npm > /dev/null; then
     JS_MANAGER=npm
 else
-    echo "Please install either npm or yarn and make it available on the path"
+    echo "Please install either npm or yarn and ensure it's on the path"
     exit 1
 fi
 
@@ -39,4 +39,5 @@ ln -sf ../assets assets
 
 $JS_MANAGER start
 
+# This will never be run but for completeness
 popd > /dev/null
