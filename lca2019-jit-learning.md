@@ -9,9 +9,7 @@
 
 ### Who am I?
 
-
-
-_insert bugcrowd logo here_
+_insert bugcrowd logo here_ <!-- .element class="fragment" -->
 
 
 
@@ -47,6 +45,8 @@ Counter example: Race conditions <!-- .element class="fragment" -->
 
 
 
+_insert screenshot_
+
 [rails/rails#34310](https://github.com/rails/rails/issues/34310)
 
 
@@ -72,3 +72,19 @@ Counter example: Statistics <!-- .element class="fragment" -->
 Assumption: The benefit of getting it done now out ways the cost of getting it wrong <!-- .element class="fragment" -->
 
 Counter example: Security <!-- .element class="fragment" -->
+
+
+
+### So what?
+
+
+
+### Just In Time
+
+or
+
+### Upfront?
+
+
+
+<img data-src="assets/jit-learning-0.svg">
