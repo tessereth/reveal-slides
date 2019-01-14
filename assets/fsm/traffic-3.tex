@@ -1,0 +1,21 @@
+\input{config}
+
+\newcommand\changed[1]{\textbf{\textcolor{red!50!white}{#1}}}
+
+\begin{document}
+\begin{tikzpicture}[state/.style={circle, draw, minimum size=1.5cm, node distance=5cm}]
+   \node[state] (rr1) {main=R \\ side=R \\ \changed{next=main}};
+   \node[state] (rg)  [above right=of rr1] {main=R \\ side=G \\ \changed{next=main}};
+   \node[state] (ry)  [right=of rg] {main=R \\ side=Y \\ \changed{next=main}};
+   \node[state] (rr2) [below right=of ry] {main=R \\ side=R \\ \changed{next=side}};
+   \node[state] (gr)  [below left=of rr2] {main=G \\ side=R \\ \changed{next=side}};
+   \node[state] (yr)  [left=of gr] {main=Y \\ side=R \\ \changed{next=side}};
+   \path[->]
+    (rr1) edge (rg)
+    (rg)  edge (ry)
+    (ry)  edge (rr2)
+    (rr2) edge (gr)
+    (gr)  edge (yr)
+    (yr)  edge (rr1);
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,13 @@
+\input{config}
+
+\begin{document}
+\begin{tikzpicture}[state/.style={circle, draw, minimum size=1.5cm, node distance=4cm}]
+   \node[state] (red)   {Red};
+   \node[state] (yellow) [below right=of red] {Yellow};
+   \node[state] (green) [above right=of yellow] {Green};
+   \path[->]
+    (red) edge  (green)
+    (green) edge  (yellow)
+    (yellow) edge (red);
+\end{tikzpicture}
+\end{document}

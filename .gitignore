@@ -1,1 +1,6 @@
 reveal.js
+
+*.aux
+*.log
+*.pdf
+*%00*

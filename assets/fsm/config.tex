@@ -1,0 +1,15 @@
+\documentclass[tikz,convert={outext=.svg,command=\unexpanded{{pdf2svg \infile\space \outfile}}}]{standalone}
+
+\usetikzlibrary{automata,positioning,arrows.meta}
+
+\tikzset{
+%-{Stealth[length=3mm,width=2mm]}, % makes the edges directed
+>={Stealth[length=3mm,width=2mm]}, % makes the arrow heads bold
+node distance=3cm, % specifies the minimum distance between two nodes. Change if necessary.
+every state/.style={ultra thick},
+every path/.style={color=white,thick},
+every node/.style={font=\Large,align=center},
+initial text=$ $,
+on grid,
+auto
+}

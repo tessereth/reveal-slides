@@ -1,0 +1,19 @@
+\input{config}
+
+\begin{document}
+\begin{tikzpicture}[state/.style={circle, draw, minimum size=1.5cm, node distance=4cm}]
+   \node[state] (rr1) {main=R \\ side=R};
+   \node[state] (rg)  [above right=of rr1] {main=R \\ side=G};
+   \node[state] (ry)  [right=of rg] {main=R \\ side=Y};
+   \node[state] (rr2) [below right=of ry] {main=R \\ side=R};
+   \node[state] (gr)  [below left=of rr2] {main=G \\ side=R};
+   \node[state] (yr)  [left=of gr] {main=Y \\ side=R};
+   \path[->]
+    (rr1) edge (rg)
+    (rg)  edge (ry)
+    (ry)  edge (rr2)
+    (rr2) edge (gr)
+    (gr)  edge (yr)
+    (yr)  edge (rr1);
+\end{tikzpicture}
+\end{document}
