@@ -35,7 +35,7 @@ fi
 
 ln -sf ../index.html index.html
 ln -sf ../$SLIDES slides.md
-ln -sf ../assets assets
+ln -sfn ../assets assets
 
 $JS_MANAGER start
 

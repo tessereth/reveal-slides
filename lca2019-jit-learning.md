@@ -1,9 +1,9 @@
-<!-- .slide: data-background-image="assets/lca-title-background.png" data-background-size="contain" -->
+<!-- .slide: data-background-image="assets/lca2019-slide-template.png" data-background-size="contain" -->
 
 ### JIT Learning: It's great until it isn't
-<!-- .element style="font-weight: normal; padding-top: 5vh" -->
+<!-- .element style="font-weight: normal; padding-top: 13vh" -->
 
-<small style="margin-left: 30vw; margin-top: 6vh; font-size: x-large">Tessa Bradbury</small>
+<small style="margin-top: 9vh; font-size: x-large">Tessa Bradbury | @tessereth</small>
 
 
 
