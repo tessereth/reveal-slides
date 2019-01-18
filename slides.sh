@@ -27,6 +27,9 @@ if [[ ! -e reveal.js ]]; then
     git clone git@github.com:hakimel/reveal.js.git
 fi
 
+# reveal.js markdown parser is catastrophically old
+cp marked.min.js reveal.js/plugin/markdown/marked.js
+
 pushd reveal.js > /dev/null
 
 if [[ ! -e node_modules ]]; then
