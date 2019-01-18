@@ -1,10 +1,11 @@
 \input{config}
 
 \begin{document}
-\begin{tikzpicture}[state/.style={circle, draw, minimum size=1.5cm, node distance=4cm}]
-   \node[state] (red)   {Red};
-   \node[state] (yellow) [below right=of red] {Yellow};
-   \node[state] (green) [above right=of yellow] {Green};
+\bf
+\begin{tikzpicture}[state/.style={circle, draw, minimum size=2cm, node distance=4cm}]
+   \node[state] (red)   {\hred{Red}};
+   \node[state] (yellow) [below right=of red] {\hyellow{Yellow}};
+   \node[state] (green) [above right=of yellow] {\hgreen{Green}};
    \path[->]
     (red) edge  (green)
     (green) edge  (yellow)

@@ -1,20 +1,23 @@
 \input{config}
+\renewcommand\hred[1]{\textbf{\textcolor{white}{#1}}}
+\renewcommand\hgreen[1]{\textbf{\textcolor{white}{#1}}}
+\renewcommand\hyellow[1]{\textbf{\textcolor{white}{#1}}}
 
 \begin{document}
-
+\bf
 \begin{tikzpicture}[state/.style={circle, draw, minimum size=1.5cm, node distance=4cm}]
-   \node[state] (rr1) [fill=red!50!black] {main=R \\ side=R};
-   \node[state] (rg)  [above right=of rr1] {main=R \\ side=G};
-   \node[state] (ry)  [right=of rg] {main=R \\ side=Y};
-   \node[state] (rr2) [below right=of ry, fill=red!50!black] {main=R \\ side=R};
-   \node[state] (gr)  [below left=of rr2] {main=G \\ side=R};
-   \node[state] (yr)  [left=of gr] {main=Y \\ side=R};
-   \path[->]
-    (rr1) edge (rg)
-    (rg)  edge (ry)
-    (ry)  edge (rr2)
-    (rr2) edge (gr)
+    \node[state] (rr1) [fill=red!50!black] {\hred{main=R} \\ \hred{side=R}};
+    \node[state, text=white] (gr)  [above right=of rr1] {\hgreen{main=G} \\ \hred{side=R}};
+    \node[state] (yr)  [right=of gr] {\hyellow{main=Y} \\ \hred{side=R}};
+    \node[state] (rr2) [below right=of yr, fill=red!50!black] {\hred{main=R} \\ \hred{side=R}};
+    \node[state] (rg)  [below left=of rr2] {\hred{main=R} \\ \hgreen{side=G}};
+    \node[state] (ry)  [left=of rg] {\hred{main=R} \\ \hyellow{side=Y}};
+    \path[->]
+    (rr1) edge (gr)
     (gr)  edge (yr)
-    (yr)  edge (rr1);
+    (yr)  edge (rr2)
+    (rr2) edge (rg)
+    (rg)  edge (ry)
+    (ry)  edge (rr1);
 \end{tikzpicture}
 \end{document}
