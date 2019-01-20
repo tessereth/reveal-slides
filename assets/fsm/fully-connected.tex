@@ -1,0 +1,41 @@
+\input{config}
+\begin{document}
+\bf
+\begin{tikzpicture}[state/.style={ellipse, draw, minimum height=1.5cm, minimum width=6cm, node distance=2cm and 12cm}]
+    \node[state] (updateLight)                           {updateLight};
+    \node[state] (carArrivedMain) [below=of updateLight] {carArrivedMain};
+    \node[state] (carArrivedSide) [below=of carArrivedMain] {carArrivedSide};
+    \node[state] (carArrivedRight) [below=of carArrivedSide] {carArrivedRight};
+    \node[state] (mainLightRed) [right=of updateLight] {mainLightRed};
+    \node[state] (mainLightYellow) [below=of mainLightRed] {mainLightYellow};
+    \node[state] (mainLightGreen) [below=of mainLightYellow] {mainLightGreen};
+    \node[state] (sideLightRed) [below=of mainLightGreen] {mainLightRed};
+    \node[state] (sideLightYellow) [below=of sideLightRed] {mainLightYellow};
+    \node[state] (sideLightGreen) [below=of sideLightYellow] {mainLightGreen};
+   \path[->]
+    (updateLight.east) edge (mainLightRed.west)
+    (updateLight.east) edge (mainLightYellow.west)
+    (updateLight.east) edge (mainLightGreen.west)
+    (updateLight.east) edge (sideLightRed.west)
+    (updateLight.east) edge (sideLightYellow.west)
+    (updateLight.east) edge (sideLightGreen.west)
+    (carArrivedMain.east) edge (mainLightRed.west)
+    (carArrivedMain.east) edge (mainLightYellow.west)
+    (carArrivedMain.east) edge (mainLightGreen.west)
+    (carArrivedMain.east) edge (sideLightRed.west)
+    (carArrivedMain.east) edge (sideLightYellow.west)
+    (carArrivedMain.east) edge (sideLightGreen.west)
+    (carArrivedSide.east) edge (mainLightRed.west)
+    (carArrivedSide.east) edge (mainLightYellow.west)
+    (carArrivedSide.east) edge (mainLightGreen.west)
+    (carArrivedSide.east) edge (sideLightRed.west)
+    (carArrivedSide.east) edge (sideLightYellow.west)
+    (carArrivedSide.east) edge (sideLightGreen.west)
+    (carArrivedRight.east) edge (mainLightRed.west)
+    (carArrivedRight.east) edge (mainLightYellow.west)
+    (carArrivedRight.east) edge (mainLightGreen.west)
+    (carArrivedRight.east) edge (sideLightRed.west)
+    (carArrivedRight.east) edge (sideLightYellow.west)
+    (carArrivedRight.east) edge (sideLightGreen.west);
+\end{tikzpicture}
+\end{document}

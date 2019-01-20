@@ -1,0 +1,26 @@
+\input{config}
+
+\begin{document}
+\bf
+\begin{tikzpicture}[state/.style={circle, draw, minimum size=1.5cm, node distance=5cm}]
+   \node[state] (rr1) {\rd{main} \\ \rd{side} \\ \rd{right} \\ \w{next=main}};
+   \node[state] (grr) [above right=of rr1] {\g{main} \\ \rd{side} \\ \rd{right} \\ \w{next=main}};
+   \node[state] (yrr) [above right=of grr] {\y{main} \\ \rd{side} \\ \rd{right} \\ \w{next=main}};
+   \node[state] (rr2) [above right=of yrr] {\rd{main} \\ \rd{side} \\ \rd{right} \\ \w{next=side}};
+   \node[state] (rgr) [below right=of rr2] {\rd{main} \\ \g{side} \\ \rd{right} \\ \w{next=side}};
+   \node[state] (ryr) [below right=of rgr] {\rd{main} \\ \y{side} \\ \rd{right} \\ \w{next=side}};
+   \node[state] (rr3) [below right=of ryr] {\rd{main} \\ \rd{side} \\ \rd{right} \\ \w{next=right}};
+   \node[state] (rrg) [below left=of ryr]  {\rd{main} \\ \rd{side} \\ \g{right} \\ \w{next=right}};
+   \node[state] (rry) [below right=of grr] {\rd{main} \\ \rd{side} \\ \y{right} \\ \w{next=right}};
+   \path[->]
+    (rr1) edge (grr)
+    (grr) edge (yrr)
+    (yrr) edge (rr2)
+    (rr2) edge (rgr)
+    (rgr) edge (ryr)
+    (ryr) edge (rr3)
+    (rr3) edge (rrg)
+    (rrg) edge (rry)
+    (rry) edge (rr1);
+\end{tikzpicture}
+\end{document}

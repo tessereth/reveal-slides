@@ -3,12 +3,12 @@
 \begin{document}
 \bf
 \begin{tikzpicture}[state/.style={circle, draw, minimum size=1.5cm, node distance=5cm}]
-   \node[state] (rr1) {main=R \\ side=R \\ \hred{next=side}};
-   \node[state] (gr)  [above right=of rr1] {main=G \\ side=R \\ next=side};
-   \node[state] (yr)  [right=of gr] {main=Y \\ side=R \\ next=side};
-   \node[state] (rr2) [below right=of yr] {main=R \\ side=R \\ \hred{next=main}};
-   \node[state] (rg)  [below left=of rr2] {main=R \\ side=G \\ next=main};
-   \node[state] (ry)  [left=of rg] {main=R \\ side=Y \\ next=main};
+   \node[state] (rr1) {main=R \\ side=R \\ \hred{next=main}};
+   \node[state] (gr)  [above right=of rr1] {main=G \\ side=R \\ next=main};
+   \node[state] (yr)  [right=of gr] {main=Y \\ side=R \\ next=main};
+   \node[state] (rr2) [below right=of yr] {main=R \\ side=R \\ \hred{next=side}};
+   \node[state] (rg)  [below left=of rr2] {main=R \\ side=G \\ next=side};
+   \node[state] (ry)  [left=of rg] {main=R \\ side=Y \\ next=side};
    \path[->]
     (rr1) edge (gr)
     (gr)  edge (yr)

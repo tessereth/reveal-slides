@@ -1,6 +1,6 @@
 \documentclass[tikz,convert={outext=.svg,command=\unexpanded{{pdf2svg \infile\space \outfile}}}]{standalone}
 
-\usetikzlibrary{automata,positioning,arrows.meta}
+\usetikzlibrary{automata,positioning,arrows.meta,shapes,shapes.geometric}
 
 \tikzset{
 %-{Stealth[length=3mm,width=2mm]}, % makes the edges directed
@@ -18,3 +18,8 @@ auto
 \newcommand\hgreen[1]{\textbf{\textcolor{green!50!white}{#1}}}
 \newcommand\hyellow[1]{\textbf{\textcolor{yellow!50!white}{#1}}}
 \newcommand\hwhite[1]{\textbf{\textcolor{white}{#1}}}
+
+\newcommand\rd[1]{\textcolor{red!50!white}{#1=R}}
+\newcommand\g[1]{\textcolor{green!50!white}{#1=G}}
+\newcommand\y[1]{\textcolor{yellow!50!white}{#1=Y}}
+\newcommand\w[1]{\textcolor{white}{#1}}

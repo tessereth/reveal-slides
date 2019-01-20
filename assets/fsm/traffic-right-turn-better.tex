@@ -1,0 +1,26 @@
+\input{config}
+
+\begin{document}
+\bf
+\begin{tikzpicture}[state/.style={circle, draw, minimum size=1.5cm, node distance=5cm}]
+   \node[state] (rr1) {next=main \\ \rd{color}};
+   \node[state] (grr) [above right=of rr1] {next=main \\ \g{color}};
+   \node[state] (yrr) [above right=of grr] {next=main \\ \y{color}};
+   \node[state] (rr2) [above right=of yrr] {next=side \\ \rd{color}};
+   \node[state] (rgr) [below right=of rr2] {next=side \\ \g{color}};
+   \node[state] (ryr) [below right=of rgr] {next=side \\ \y{color}};
+   \node[state] (rr3) [below right=of ryr] {next=right \\ \rd{color}};
+   \node[state] (rrg) [below left=of ryr]  {next=right \\ \g{color}};
+   \node[state] (rry) [below right=of grr] {next=right \\ \y{color}};
+   \path[->]
+    (rr1) edge (grr)
+    (grr) edge (yrr)
+    (yrr) edge (rr2)
+    (rr2) edge (rgr)
+    (rgr) edge (ryr)
+    (ryr) edge (rr3)
+    (rr3) edge (rrg)
+    (rrg) edge (rry)
+    (rry) edge (rr1);
+\end{tikzpicture}
+\end{document}
