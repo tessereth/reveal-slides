@@ -9,7 +9,9 @@
 
 ### Who am I?
 
-_insert bugcrowd logo here_ <!-- .element class="fragment" -->
+
+
+<img data-src="assets/bugcrowd.svg" width="200px">
 
 
 
