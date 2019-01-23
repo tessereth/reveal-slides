@@ -6,24 +6,24 @@
     \node[state] (updateLight)                           {updateLight};
     \node[state] (carArrivedMain) [below=of updateLight] {carArrivedMain};
     \node[state] (carArrivedSide) [below=of carArrivedMain] {carArrivedSide};
-    \node[state] (carArrivedRight) [below=of carArrivedSide] {carArrivedRight};
+    \node[state] (eventEtc) [below=of carArrivedSide] {...};
     \node[state] (state) [right=of carArrivedMain, minimum width=3cm] {state};
     \node[state] (mainLightRed) [above right=of state] {mainLightRed};
     \node[state] (mainLightYellow) [below=of mainLightRed] {mainLightYellow};
     \node[state] (mainLightGreen) [below=of mainLightYellow] {mainLightGreen};
     \node[state] (sideLightRed) [below=of mainLightGreen] {mainLightRed};
     \node[state] (sideLightYellow) [below=of sideLightRed] {mainLightYellow};
-    \node[state] (sideLightGreen) [below=of sideLightYellow] {mainLightGreen};
+    \node[state] (outputEtc) [below=of sideLightYellow] {...};
    \path[->]
     (updateLight.east) edge (state)
     (carArrivedMain.east) edge (state)
     (carArrivedSide.east) edge (state)
-    (carArrivedRight.east) edge (state)
+    (eventEtc.east) edge (state)
     (state) edge (mainLightRed.west)
     (state) edge (mainLightYellow.west)
     (state) edge (mainLightGreen.west)
     (state) edge (sideLightRed.west)
     (state) edge (sideLightYellow.west)
-    (state) edge (sideLightGreen.west);
+    (state) edge (outputEtc.west);
 \end{tikzpicture}
 \end{document}
