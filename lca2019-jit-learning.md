@@ -3,11 +3,7 @@
 ### JIT Learning: It's great until it isn't
 <!-- .element style="font-weight: normal; padding-top: 13vh" -->
 
-<small style="margin-top: 9vh; font-size: x-large">Tessa Bradbury | @tessereth</small>
-
-
-
-### Who am I?
+<small style="margin-top: 9vh; font-size: x-large">Tessa Bradbury</small>
 
 
 
@@ -47,7 +43,8 @@ Counter example: Race conditions <!-- .element class="fragment" -->
 
 
 
-_insert screenshot_
+
+<img data-src="assets/rails-deadlocks.png">
 
 [rails/rails#34310](https://github.com/rails/rails/issues/34310)
 
@@ -78,6 +75,8 @@ Counter example: Security <!-- .element class="fragment" -->
 
 
 ### So what?
+
+# 🤷‍
 
 
 
